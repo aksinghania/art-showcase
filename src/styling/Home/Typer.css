@@ -1,0 +1,63 @@
+.typerContainer {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  height: 3.5rem;
+  align-items: center;
+}
+
+.typerContainerText {
+  color: "white";
+  background-color: orange;
+  width: 20%;
+}
+.typerContainerText h2 {
+  color: rgb(255, 255, 255);
+  background-color: orange;
+  align-items: center;
+  padding: 11px;
+  margin: 0;
+}
+.type {
+  color: rgb(255, 255, 255);
+  margin: 50px;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .typerContainer {
+    background-color: rgb(0, 0, 0);
+
+    align-items: center;
+  }
+  .typerContainerText {
+    width: 25%;
+  }
+  @media screen and (max-width: 500px) {
+    .typerContainer {
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    .typerContainerText {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    .typerContainerText h2 {
+      font-size: medium;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .type {
+      margin: 5px;
+
+      width: 100%;
+      font-size: small;
+
+      align-items: center;
+    }
+  }
+}
