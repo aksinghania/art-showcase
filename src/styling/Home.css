@@ -1,0 +1,9 @@
+.imageHead {
+  display: flex;
+  width: 100%;
+}
+.imageHead img {
+  width: 100%;
+  max-height: 40rem !important;
+  object-fit: cover;
+}
