@@ -2,16 +2,18 @@ import React from "react";
 
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
-import LogoImg from '../assets/logo.png'
+import LogoImg from "../assets/logo.png";
+import { PreHeader } from "../pages/Home";
 
 function Navbar() {
   const [showLinks, setShowLinks] = useState(false);
 
   return (
     <>
+      <PreHeader />
       <div className="navbarGridContainer">
         <div className="gridItemImg">
-        <img src={LogoImg}/>
+          <img src={LogoImg} />
         </div>
 
         <div className="gridItemHumbergerIcon">
@@ -35,7 +37,7 @@ function Navbar() {
                 }}
               />
             </button>
-           
+
             <div className={`navlinks ${showLinks ? "slideInn" : "slideOutt"}`}>
               <a href={"./"}>
                 <p> HOME</p>
