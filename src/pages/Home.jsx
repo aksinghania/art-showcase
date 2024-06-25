@@ -1,5 +1,6 @@
 import welcomeImg from "../assets/welcome.png";
 import Carousel from "../components/Home/Carousel";
+import Gallery from "../components/Home/Gallery";
 import Typer from "../components/Home/Typer";
 
 const introImgURL =
@@ -14,6 +15,7 @@ const Home = () => {
       <Typer text={["Awesome new news that we need to tell everyone!!!"]} />
       <AboutSection />
       <Carousel />
+      <Gallery />
     </>
   );
 };

@@ -1,12 +1,12 @@
 import React from "react";
 import { ReactTyped as Typed } from "react-typed";
 
-function Typer({ text = [] }) {
+function Typer({ title = "Announcement", text = [] }) {
   return (
     <>
       <div className="typerContainer">
         <div className="typerContainerText">
-          <h2>Announcement</h2>
+          <h2>{title}</h2>
         </div>
 
         <div className="type">
