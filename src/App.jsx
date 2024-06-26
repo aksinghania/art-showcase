@@ -16,10 +16,10 @@ const Wrapper = ({ Component }) => (
   </>
 );
 const routesobject = {
-  Home: "/",
-  Gallery: "/Gallery",
-  Testimonials: "/Testimonials",
-  Store: "/Store",
+  Home: "/art-showcase/",
+  Gallery: "/art-showcase/Gallery",
+  Testimonials: "/art-showcase/Testimonials",
+  Store: "/art-showcase/Store",
 };
 const routes = [
   {
