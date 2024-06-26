@@ -5,7 +5,9 @@ import { useState } from "react";
 import LogoImg from "../assets/logo.png";
 import { PreHeader } from "../pages/Home";
 
-function Navbar() {
+import { Outlet, Link } from "react-router-dom";
+
+function Navbar({ routes = {} }) {
   const [showLinks, setShowLinks] = useState(false);
 
   return (
@@ -39,26 +41,20 @@ function Navbar() {
             </button>
 
             <div className={`navlinks ${showLinks ? "slideInn" : "slideOutt"}`}>
-              <a href={"./"}>
-                <p> HOME</p>
-              </a>
-              <a href={"./Gallery1"}>
-                <p> GALLERY</p>
-              </a>
-              <a href={"./Testimonial"}>
-                <p>TESTIMONIAL</p>
-              </a>
-              <a href={"./Courses"}>
-                <p>COURSES</p>
-              </a>
+              {Object.keys(routes).map((val) => (
+                <Link key={val} to={routes[val]}>
+                  <p>{val}</p>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
         <div id="nav-links">
-          <a href={"./"}>HOME</a>
-          <a href={"./Gallery1"}> GALLERY</a>
-          <a href={"./Testimonial"}> TESTIMONIAL</a>
-          <a href={"./Courses"}> COURSES</a>
+          {Object.keys(routes).map((val) => (
+            <Link key={val} to={routes[val]}>
+              {val}
+            </Link>
+          ))}
         </div>
       </div>
     </>
